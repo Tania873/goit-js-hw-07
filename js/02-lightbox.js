@@ -18,9 +18,9 @@ galleryListEl.insertAdjacentHTML("afterbegin", galleryCardsArr.join(''));
 const onGalleryImgClick = event => {
     event.preventDefault();
 
-     const { target } = event;
+        const { target } = event;
 
-    if (target.nodeNAme !== 'IMG') {
+    if (target.nodeName !== 'IMG') {
         return;
     }
 
