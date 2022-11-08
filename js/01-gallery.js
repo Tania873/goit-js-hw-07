@@ -25,7 +25,13 @@ galleryListEl.insertAdjacentHTML("afterbegin", galleryCardsArr.join(''));
 const onGalleryImgClick = event => {
     event.preventDefault();
 
-    const largeImagePath = event.target.dataset.source;
+    const { target } = event;
+
+    if (target.nodeNAme !== 'IMG') {
+        return;
+    }
+
+    const largeImagePath = target.dataset.source;
 
     const instance = basicLightbox.create(`
         <img src="${largeImagePath}" width="800" height="600">

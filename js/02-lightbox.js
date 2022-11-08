@@ -18,6 +18,12 @@ galleryListEl.insertAdjacentHTML("afterbegin", galleryCardsArr.join(''));
 const onGalleryImgClick = event => {
     event.preventDefault();
 
+     const { target } = event;
+
+    if (target.nodeNAme !== 'IMG') {
+        return;
+    }
+
     new SimpleLightbox('.gallery a', { 
         captionsData: 'alt',
         captionDelay: 250,
