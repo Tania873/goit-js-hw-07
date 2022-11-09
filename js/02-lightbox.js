@@ -23,11 +23,11 @@ const onGalleryImgClick = event => {
     if (target.nodeName !== 'IMG') {
         return;
     }
-
-    new SimpleLightbox('.gallery a', { 
-        captionsData: 'alt',
-        captionDelay: 250,
-     });
 }
 
 galleryListEl.addEventListener('click', onGalleryImgClick);
+
+new SimpleLightbox('.gallery a', { 
+        captionsData: 'alt',
+        captionDelay: 250,
+     });
